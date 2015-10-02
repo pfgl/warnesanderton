@@ -1,0 +1,57 @@
+.clearfix {zoom: 1;}
+
+ul#menu ul li  {display: inline; width: 100%;}
+
+#contact address {
+overflow: hidden;
+height: 160px;
+font-size: 12px;
+}
+
+#contact li, #footernav li {
+list-style: outside;
+}
+
+#footernav h4 {
+font-size: 12px;
+}
+
+.sub-link {
+display: inline;
+}
+
+.sub-link.first {
+clear: both;
+}
+
+.contact-details li {
+list-style: outside none;
+}
+
+.contact li {
+background: #fff;
+list-style: outside;
+}
+
+#contact-form  {
+clear: both;
+margin-top: 25px;
+}
+
+#pfg-news li {
+list-style: outside;
+}
+
+
+blockquote {
+overflow: hidden;
+}
+
+#archives ul {
+list-style: outside;
+}
+
+.team-member {
+overflow: hidden;
+padding-bottom: 20px;
+}

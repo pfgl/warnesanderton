@@ -1,0 +1,981 @@
+/*
+Theme Name: Perspective - Creating Wealth
+Description: Website theme for Perspective
+Author: Optimise Internet
+Author URI: http://www.optimiseinternet.com
+*/
+
+/*
+88""Yb 888888 88""Yb .dP"Y8 88""Yb 888888  dP""b8 888888 88 Yb    dP 888888
+88__dP 88__   88__dP `Ybo." 88__dP 88__   dP   `"   88   88  Yb  dP  88__
+88"""  88""   88"Yb  o.`Y8b 88"""  88""   Yb        88   88   YbdP   88""
+88     888888 88  Yb 8bodP' 88     888888  YboodP   88   88    YP    888888
+*/
+
+/*-------------------------------------------------------------------------------------------*/
+/* COLOUR REFERENCES */
+/*-------------------------------------------------------------------------------------------
+#
+#	RED -------	#d31145
+#	GREY ------ #404040
+#
+-------------------------------------------------------------------------------------------
+
+INDEX:
+
+1. SETUP
+-1.1 Defaults
+-1.2 Hyperlinks
+
+2. SITE STRUCTURE & APPEARANCE
+-2.1 Containers & Columns
+-2.2 Navigation
+-2.3 Header
+-2.4 Content
+-2.5 Sidebar
+-2.6 Extended Footer
+-2.7 Footer
+
+3. POSTS
+-3.1 Typographic Elements
+-3.2 Images
+-3.3 Pagination / WP-Pagenavi
+
+4. COMMENTS
+-4.1 Comments
+-4.2 Pingbacks / Trackbacks
+-4.3 Comments Form
+-4.4 Gravity forms
+-4.5 Tooltips
+
+
+-------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------*/
+/* 1. SETUP */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 1.1 Defaults */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: ''; content: none;}
+
+/* remember to define focus styles! */
+:focus {outline: 0;}
+
+/* remember to highlight inserts somehow! */
+ins {text-decoration: none;}
+
+del {text-decoration: line-through;}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+
+body{font: 13px/140% Tahoma, Verdana, Arial, sans-serif; letter-spacing: -0.2px; color: #404040;}
+
+p, ul {
+margin-bottom: 1.6em;
+}
+
+ul, ol {
+line-height: 1.6em;
+}
+
+ul {
+list-style: inside disc;
+}
+
+ol {
+list-style: inside decimal;
+}
+
+h1 {
+font-size: 16px;
+margin-bottom: 20px;
+}
+
+h2 {
+font-size: 18px;
+margin-bottom: 15px;
+}
+
+h3 {
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+blockquote {
+padding-left: 45px;
+line-height: 1.5em;
+background: url(images/blockquotebg.png) no-repeat left top;
+margin-bottom: 35px;
+}
+
+	blockquote cite  {
+	font-style: normal;
+	font-weight: bold;
+	}
+
+
+/* 1.2 Hyperlinks */
+
+a {color: #d31145; text-decoration: none;}
+a:hover {color: #ed1952; text-decoration: underline;}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 2. SITE STRUCTURE & APPEARANCE */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 2.1 Containers & Columns */
+
+#wrapper {
+width: 960px;
+margin: 25px auto;
+}
+
+#slider-container {
+position: relative;
+width: 720px;
+height: 500px;
+}
+
+.nivo-controlNav {
+position: absolute;
+right: 20px;
+top: 20px;
+z-index: 200;
+text-align: right;
+}
+
+.nivo-controlNav a {
+	padding: 3px 8px;
+	color: #fff;
+	background: #D01448;
+	margin-left: 5px;
+	float: left;
+	}
+
+.nivo-controlNav a.active {
+	background: #a21038;
+	font-weight: normal;
+	}
+
+#slider {
+width: 720px;
+height: 500px;
+overflow: hidden;
+position: relative;
+z-index: 100;
+background: url(images/loading.gif) no-repeat 50% 50%;
+}
+
+	#slider img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	}
+
+	#slider a {
+	border: 0;
+	display: block;
+	}
+
+
+#perspective-news {
+/* News/Blog Container */
+float: left;
+width: 520px;
+margin: 0 20px 50px 0;
+}
+
+/* 2.2 Navigation */
+
+#menu-leftnav {
+list-style: none;
+line-height: 22px;
+background: url(images/dotted.png) repeat-x bottom;
+margin: 0;
+padding-bottom: 50px;
+}
+
+	#menu-leftnav li a {
+	color: #404040;
+	}
+
+	li.current_page_item a {
+	color: #d31145 !important;
+	}
+
+
+/* 2.3 Header */
+
+#header {
+text-align: right;
+/* background: url(images/watermark.png) no-repeat bottom left; */
+margin-bottom: 20px;
+width: 160px;
+padding-right: 60px;
+margin-right: 20px;
+float: left;
+}
+
+#logo{
+width:160px;
+height:103px;
+background:url(images/logo.png) no-repeat;
+margin-bottom: 25px;
+}
+
+#logo a {
+display:block;
+height:100%;
+width:100%;
+}
+
+#logo a span{
+position:absolute;
+left:-9999px;
+top:-9999px;
+}
+
+.header-tel {
+font-size: 19px;
+margin-bottom: 15px;
+}
+
+/* #social-links {
+list-style: none;
+margin: 20px 0;
+}
+
+	#social-links li {
+	display: inline;
+	}
+*/
+
+#header .legal {
+background: url(images/dotted.png) repeat-x bottom;
+padding: 15px 0;
+font-size: 11px;
+color: #666;
+}
+
+	#header .legal p {
+	text-align: left!important;
+	}
+
+	#header .legal img {
+	margin: 0 40px 0;
+	}
+
+#header a.button {
+font-size: 12px;
+background: #797979 url(images/btnoverlay.png) repeat-x top;
+display: inline-block;
+color: #fff;
+text-decoration: none;
+font-weight: normal;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-box-shadow : 0 1px 1px #999;
+-webkit-box-shadow: 0 1px 1px #999;
+border-bottom: 1px solid #575757;
+padding: 3px 10px;
+cursor: pointer;
+padding: 5px 10px 7px 10px;
+text-shadow: 0 -1px 1px #464646;
+margin-bottom: 10px;
+width: 140px;
+text-align: left;
+}
+
+#header a.button:hover {
+background-color: #8a8a8a;
+}
+
+#header a.button.warning {
+background-color: #D01448;
+text-shadow: 0 -1px 1px #830d2d;
+color: #fff;
+margin-top: 25px;
+}
+
+#header a.button.warning:hover {
+background-color: #df154d;
+}
+
+#header a.button img {float: left; margin-top: 10px; margin-right: 6px;}
+#header a.button.warning img {float: left; margin-right: 8px; margin-top: 3px;}
+
+/* 2.4 Content */
+
+#body {
+width: 720px;
+float: left;
+margin-bottom: 40px;
+}
+
+ul h4, ol h4 {
+display: inline-block;
+}
+
+#body abbr {
+border-bottom: 1px dotted #d31145;
+}
+
+.pagetitle {
+overflow: hidden;
+margin-bottom: 20px;
+}
+
+	.pagetitle h1 {
+	float: left;
+	background: #d31145 url(images/titlebg.png) no-repeat left top;
+	color: #fff;
+	font-weight: normal;
+	text-transform: uppercase;
+	display: block;
+	width: 210px;
+	line-height: 38px;
+	padding: 0 0 0 10px;
+	margin-bottom: 0;
+	font-family: "Century Gothic", Helvetica, sans-serif;
+	}
+
+	.pagetitle #breadcrumbs {
+	float: right;
+	line-height: 34px;
+	color: #444;
+	margin-bottom: 0
+	}
+
+	.pagetitle #breadcrumbs a {
+	color: #444;
+	}
+
+#content {
+clear: both;
+margin-top: 25px;
+}
+
+.sub-links {
+overflow: hidden;
+}
+
+	.sub-links.bottom {
+	margin-top: 50px;
+	}
+
+	.sub-link {
+	float: left;
+	width: 220px;
+	margin: 0 0 20px 30px;
+	}
+
+	.sub-link.first {
+	margin-left: 0;
+	clear: both;
+	}
+
+.sub-links div h3 {
+background: #d31145 url(images/titlebg.png) no-repeat left top;
+line-height: 30px;
+color: #fff;
+padding: 0 0 0 10px;
+font-weight: normal;
+text-transform: uppercase;
+font-size: 13px;
+}
+
+	.sub-links a.more  {
+	text-transform: uppercase;
+	}
+
+.banner{
+	display:block;
+	width:220px;
+	height:130px;
+	overflow:hidden;
+	margin-bottom: 20px;
+}
+
+.banner img{
+	overflow:hidden;
+}
+
+
+/* People */
+.team-member {
+margin-bottom: 20px;
+background: url(images/dotted.png) repeat-x bottom;
+overflow: hidden;
+padding-bottom: 15px;
+}
+
+.team-member .description {
+overflow: hidden;
+}
+
+	.team-member .description h3 {
+	color: #d31145;
+	margin-bottom: 5px;
+	}
+
+	.team-member .description strong {
+	margin-bottom: 15px;
+	display: block;
+	font-size: 12px;
+	}
+
+.team-member .profilepic {
+float: left;
+margin-right: 20px;
+}
+
+/* Find an IFA */
+#ifa-content {
+clear: both;
+float: left;
+width: 400px;
+display: inline;
+margin-top: 25px;
+}
+
+#ifa-content {
+clear: both;
+float: left;
+width: 230px;
+display: inline;
+margin-top: 25px;
+}
+
+#ifa-map {
+float: right;
+width: 474px;
+height: 542px;
+display: inline;
+position: relative;
+margin: 25px 0 50px 0;
+background: url(images/map2.jpg) no-repeat 0 0;
+}
+
+	#ifa-map .bullet {
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url(images/bullets.png) no-repeat top;
+	text-indent: -9999px;
+	position: absolute;
+	}
+
+	.active.bullet {
+	background: url(images/bullets.png) no-repeat bottom!important;
+	}
+
+	/* IFA Locations */
+	#rutherford-wilkinson {top: 181px; left: 270px;}
+	#harrogate-independant {top: 249px; left: 290px; }
+	#multiplex {top: 307px; left: 275px;}
+	#perspective-group {top: 302px; left: 295px;}
+	#warnes-anderton {top: 285px; left:330px;}
+	#mcgregors {top: 304px; left: 358px;}
+	#mcgregors2 {top: 323px; left: 338px;}
+	#mcgregors3 {top: 336px; left: 343px; }
+	#mcgregors4 {top: 358px; left: 284px; }
+	#applewood1 {top: 320px; left: 270px;}
+	#applewood2 {top: 333px; left: 275px;}
+	#cambridge-investments {top: 340px; left: 380px; }
+	#wingham-wyatt {top: 366px; left: 402px; }
+	#perspective-financial {top: 374px; left: 341px;}
+	#chambers-co {top: 381px; left: 396px;}
+	#chessman-partners {top: 387px; left: 357px; }
+	#charles-reynolds-associates {top: 392px; left: 373px;}
+	#pims {top: 406px; left: 420px; }
+	#platinum-portfolios {top: 429px; left: 415px;}
+	#equilibrium {top: 405px; left: 325px;}
+	#leedham {top: 290px; left: 274px;}
+
+/* IFA Details */
+
+#ifa-details {
+clear: both;
+margin: 40px 0;
+}
+
+#ifa-details address {
+font-style: normal;
+}
+
+#ifa-details img {
+/*float: right;
+margin: 0 25px;
+padding: 5px;*/
+}
+
+#ifa-details h3 {
+font-size: 15px;
+line-height: 22px;
+}
+
+
+/* 2.5 Sidebar */
+
+#sidebar {
+float: left;
+width: 160px;
+background: url(images/dotted.png) repeat-x bottom;
+padding-bottom: 40px;
+}
+
+#sidebar h3, #address-details h4 {
+background: url(images/dotted.png) repeat-x bottom;
+padding-bottom: 15px;
+}
+
+.sidebar-item {
+margin-top: 80px;
+}
+
+	.sidebar-item ul, .sidebar-item li {
+	list-style: none;
+	}
+
+	.sidebar-item a {
+	color: #404040;
+	}
+
+
+/* Add icon to PDF downloads */
+
+.pdf-download {
+padding-left: 22px;
+line-height: 1.8em;
+background: url(images/file_extension_pdf.png) no-repeat left center;
+display: block;
+}
+
+/* 2.6 Extended Footer */
+
+#extended-footer-wrap {
+width: 100%;
+margin: 0 auto;
+padding: 20px 0;
+background: #999999 url(images/footergradient.png) repeat-x top;
+clear: both;
+color: #fff;
+}
+
+#extended-footer {
+overflow: hidden;
+width: 960px;
+margin: 20px auto;
+}
+
+#extended-footer abbr {
+border-bottom: 1px dotted #ccc;
+}
+
+#extended-footer a {
+color: #fff;
+}
+
+
+#contact {
+width: 160px;
+padding: 20px 50px 20px 0;
+float: left;
+background: url(images/ukmap.png) no-repeat;
+}
+
+#contact-address-details {
+background: url(images/dotted.png) repeat-x bottom;
+padding-bottom: 10px;
+margin-bottom: 40px;
+}
+
+#contact-address-details ul {
+margin-bottom: 0;
+}
+
+#contact-address-details ul li {
+list-style: none;
+margin-bottom: 3px;
+}
+
+	li#telephone {
+	padding-left: 35px;
+	background: url(images/icontelephone.png) no-repeat 0 50%;
+	font-weight: bold;
+	list-style: none;
+	}
+
+	li#email {
+	font-weight: bold;
+	padding-left: 35px;
+	background: url(images/iconemail.png) no-repeat 0 50%;
+	list-style: none;
+	}
+
+#contact address {
+background: url(images/iconaddress.png) no-repeat 0 5px;
+font-style: normal;
+padding-left: 35px;
+margin-top: 20px;
+}
+
+#pfg-news {
+background: #898989;
+width: 360px;
+padding: 20px;
+float: left;
+margin-left: 30px;
+margin-right: 30px;
+}
+
+	#pfg-news .more {
+	float: right;
+	font-weight: bold;
+	font-size: 12px;
+	}
+
+	#pfg-news ul {
+	list-style: none;
+	}
+
+	#pfg-news li {
+	margin-top: 20px;
+	font-size: 12px;
+	line-height:  19px;
+	}
+
+	#pfg-news ul h3 {
+	text-transform: capitalize;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	margin-bottom: 5px;
+	font-size: 13px;
+	}
+
+#happy-clients {
+float: right;
+width: 250px;
+height: 259px;
+padding: 20px!important;
+background: url(images/happy-clients.png) no-repeat center;
+}
+
+	#happy-clients blockquote {
+	padding: 20px!important; margin: 0;
+	width: 250px;
+	height: 239px;
+	background: 0;
+	font-style: italic;
+	font-size: 12px;
+	background: none!important;
+	}
+
+	#happy-clients p.author {
+	margin-bottom: 0;
+	font-weight: bold;
+	font-style: normal;
+	}
+
+
+/* Subsidary Statement */
+
+#subsidary-statement {
+clear: both;
+margin: 35px auto 10px auto;
+width: 940px;
+padding: 10px;
+background: #898989;
+line-height: 35px;
+overflow: hidden;
+}
+
+#subsidary-statement p {
+margin-bottom: 0;
+}
+
+#subsidary-statement img {
+float: left;
+display: inline;
+margin-right: 20px;
+}
+
+
+/* 2.7 Footer */
+
+#footer p {
+margin-bottom: 5px;
+padding: 0;
+}
+
+#footer p > small {
+font-size: 0.85em;
+}
+
+.smallprint {
+font-size: 0.85em;
+padding-top: 8px;
+background: url(images/dotted.png) repeat-x top;
+margin-top: 50px;
+}
+
+#footer {
+margin: 20px auto;
+width: 960px;
+}
+
+#footer .post-edit-link {
+color: #d31145;
+}
+
+#footer ul {
+list-style: none;
+font-size: 11px;
+}
+	#footer ul.footer-links {
+	background: url(images/dotted.png) repeat-x top;
+	clear: both;
+	margin-top: 15px;
+	padding-top: 10px;
+	}
+
+	#footer ul {
+	margin-bottom: 0;
+	}
+
+	#footer li {
+	display: inline;
+	}
+
+	#footer li a {
+	color: #404040;
+	}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 3. POSTS */
+/*-------------------------------------------------------------------------------------------*/
+
+/* Post Listings */
+.post {
+padding: 20px 0;
+background: url(images/dotted.png) repeat-x bottom;
+}
+
+.post h2 a {
+color: #404040;
+font-size: 16px;
+}
+
+	.post .excerpt {
+	overflow: hidden;
+	}
+
+	.post .excerpt .more {
+	margin-bottom: 0;
+	}
+
+.post .date {
+float: left;
+margin: 3px 20px 15px 0;
+background: #d31145 url(images/titlebg.png) no-repeat left top;
+padding: 5px 15px;
+color: #fff;
+text-align: center;
+}
+
+	.post .day {
+	display: block;
+	font-size: 20px;
+	}
+
+	.post .month {
+	font-size: 14px;
+	}
+
+
+/* Single Posts */
+.post-head {
+background: url(images/dotted.png) repeat-x bottom;
+padding: 10px 0 20px 0;
+margin: 0 0 30px 0;
+}
+
+.post-content {
+width: 720px;
+float: left;
+margin-bottom: 50px;
+}
+
+	.post-options {
+	/* Back to News Link container */
+	clear: both;
+	background: url(images/dotted.png) repeat-x top;
+	width: 720px;
+	padding-top: 20px;
+	}
+
+.post-content h2 {
+background: url(images/dotted.png) repeat-x top;
+padding-top: 20px;
+font-size: 18px;
+margin-bottom: 5px;
+}
+
+.post-content .meta {
+margin-bottom: 0;
+font-size: 12px;
+color: #a1a1a1;
+}
+
+/* 3.1 Typographic Elements */
+
+.post h1, .post h2, .post h3 {
+text-transform: capitalize;
+}
+
+.post h1 {
+color: #404040;
+background: none;
+padding: 0;
+font-weight: normal;
+}
+
+.post h2 {
+text-transform: capitalize;
+}
+
+/* 3.2 Images */
+
+img.alignright {
+float: right;
+margin: 10px 0 10px 10px;
+}
+
+img.alignleft {
+float:left;
+margin: 10px 10px 10px 0;
+}
+
+img.aligncenter {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+a img.alignright {
+float:right;
+ margin:0 0 10px 1em;
+ }
+
+a img.alignleft {
+float:left;
+margin:0 1em 1em 0;
+}
+
+a img.aligncenter {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 4. Comments */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 4.1 Comments */
+/* 4.2 Pingbacks / Trackbacks */
+/* 4.3 Comments Form */
+
+/* 4.4 Gravity forms */
+
+#address-details {
+float: right;
+width: 220px;
+margin-left: 20px;
+clear: both;
+margin-top: 25px;
+}
+
+	#address-details p {
+	font-style: normal;
+	}
+
+	#address-details h4 {
+	margin-bottom: 15px;
+	}
+
+	#address-details .contact-details {
+	font-style: normal;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+
+#contact-form  {
+float: left;
+width: 460px;
+display: inline;
+}
+
+	.contact .gform_footer {
+	padding-top: 0!important;
+	}
+
+
+	.gform_wrapper input.button {
+	border: none;
+	width: 90px;
+	height:  29px;
+	overflow: hidden;
+	display: block;
+	background: url(images/btnsubmit.png) no-repeat top left;
+	cursor: pointer;
+	text-indent: -9999px;
+	float: left;
+	}
+
+	.contact .gform_edit_link {
+	float: right;
+	}
+
+	.contact li {
+	margin-bottom: 5px!important;
+	background: #f2f2f2;
+	padding: 0 15px 15px;
+	}
+
+	.contact .gfield_label {
+	font-weight: bold!important;
+	font-size: 12px;
+	}
+
+	.contact .gfield input, .contact select {
+	border: 1px solid #c1c1c1;
+	padding: 4px!important;
+	background: #fcfcfc;
+	}
+
+	.contact select {
+	width: auto!important;
+	}
+
+
+/* 4.5 Tooltips */
+#preview {
+position:absolute;
+background:#404040;
+padding:5px 5px 0 5px;
+display:none;
+color:#fff;
+z-index: 400;
+}

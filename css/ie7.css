@@ -1,0 +1,7 @@
+.row {
+overflow: hidden;
+}
+
+#twitter_update_list li {
+padding-left: 100px;
+}
